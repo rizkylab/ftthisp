@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('password'),
         ]);
         $tech->roles()->attach($techRole);
+        $this->call(AreaSeeder::class);
 
         // OLTs
         $olts = [];
